@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Landing Page Design</title>
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<!-- fontawesome cdn -->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+/*google fonts*/
+
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.5;
+	color: #fefefe;	
+	position: relative;
+	overflow-x: hidden;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+/*ends base*/
+
+.container {
+	width: 1280px;
+	max-width: 97%;
+	margin: 0 auto;
+}
+header:hover{
+    background-color: black;
+    filter: invert(1);
+}
+a {	
+	display: inline-block;
+	text-decoration: none;
+}
+
+/*ends basic*/
+
+.hero {
+	width: 100%;
+	min-height: 100vh;
+	height: 100%;
+	padding-bottom: 50px;
+	background: #242424;
+	background-image: url(../img/background.png);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: 80%;
+}
+
+.hero header {
+	padding: 30px 0 50px 0;
+}
+
+.hero header .container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero header .logo h2 {
+	font-family: 'Lato', sans-serif;
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #67e037;
+	cursor: pointer;
+}
+
+.hero header .logo h2 span {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background: #25d834;
+	border-radius: 15px;
+	margin-left: 5px;
+}
+
+.hero header nav ul {
+	list-style: none;
+}
+
+.hero header nav ul li {
+	display: inline-block;
+}
+
+.hero header nav ul li a {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 600;
+	margin-left: 25px;
+	color: #ffffff;
+	transition-duration: .3s;
+	transition-property: box-shadow, color;
+}
+
+.hero header nav ul li a:hover {
+	color: #9de243;
+}
+
+.hero header nav ul li.action a {
+	background: #57cc28;
+	color: #242424;
+	padding: 12px 28px;
+	border-radius: 40px;
+	margin-left: 45px;
+}
+
+.hero header nav ul li.action a:hover {
+	box-shadow: 0px 0px 5px #2ad324, 0px 0px 15px #7CFFF2;
+}
+
+.details {
+	margin-top: 180px;
+}
+
+.details .container {
+	width: 1166px;
+	max-width: 95%;
+	margin: 0 auto;
+}
+
+.details h1 {
+	font-size: 42px;
+	font-weight: 700;
+	line-height: 1.1;	
+}
+
+.details p {
+	width: 420px;
+	max-width: 100%;
+	text-align: left;
+	font-size: 15px;
+	margin: 30px 0px 20px;
+}
+
+.details a {
+	background: #33df2d;
+	color: #242424;
+	padding: 10px 25px;
+	border-radius: 4px;
+	font-size: 15px;
+	font-weight: 600;
+	transition-duration: .3s;
+	transition-property: box-shadow;
+}
+
+.details a:hover {
+	box-shadow: inset 135px 0px 5px #30d63e, inset 100px 0px 5px #242424;
+}
+
+.connect {
+	margin-top: 120px;
+}
+
+.connect .container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	z-index: 1
+}
+
+.connect h3 {
+	font-family: 'Lato', sans-serif;
+	font-size: 17px;
+	color: #1dc025;
+	margin-right: 70px;
+	position: relative;
+}
+
+.connect h3:after {
+	content: "";
+	width: 30%;
+	height: 2px;
+	background: #37dd3f;
+	position: absolute;
+	top: 50%;
+	right: -43%;
+}
+
+.connect .links a {
+	font-size: 17px;
+	margin: 0px 8px;
+	color: #45cc40;
+}
+
+.connect .links a:hover {
+	color: #71ee60;
+}
+
+@media screen and (max-width: 1300px) {
+	.hero {		
+		background-size: 90%;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.hero {
+		background-size: 110%;
+	}
+	.details h1 {
+		font-size: 36px;	
+	}
+
+	.hamb {
+		width: 40px;
+		height: 30px;
+		cursor: pointer;
+		position: absolute;
+		top: 44px;
+		right: 2%;
+		z-index: 5;
+	}
+	
+	.hamb span {
+		display: block;
+		width: 100%;
+		height: 3px;
+		background: #ffffff;
+		opacity: 1;
+		transition-duration: .3s;
+		transition-property: opacity transform top bottom;
+	}
+	
+	.hamb span:nth-child(2) {
+		margin: 7px 0px;
+	}
+	
+	.hamb.click span {		
+		position: absolute;
+		top: 10px;
+	}
+
+	.hamb.click span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamb.click span:nth-child(1) {
+		transform: rotate(-40deg);
+		top: 12px;
+	}
+
+	.hamb.click span:nth-child(3) {
+		transform: rotate(40deg);
+		top: 12px;
+	}
+
+	.hero .menu-overlay {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #242424;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow-y: auto;
+		transform: translateX(100%);
+		opacity: 0;
+		transition-duration: .5s;
+		transition-property: transform opacity;
+	}
+
+	.hero .menu-overlay.active {
+		transform: translateX(0%);
+		opacity: 1;
+		z-index: 4;
+	}
+
+	.hero header nav.active ul, 
+	.hero header nav.active ul li,
+	.hero header nav.active ul li a {
+		position: relative;
+	}
+
+	.hero header nav.active ul li {
+		display: block;
+		text-align: center;
+	}
+
+	.hero header nav ul li {
+		display: block;
+		text-align: center;
+	}
+
+	.hero header nav ul li a {
+		text-transform: uppercase;
+		font-size: 2.5em;
+		font-weight: 700;
+		margin: 10px 0px;
+		padding: 0px 15px;
+		color: #fefefe;
+	}
+
+	.hero header nav.active ul li a:hover {
+		color: red;
+	}
+
+	.hero header nav ul li.action a {
+		background: transparent;
+		color: #fefefe;
+		padding: 0px 15px;
+		border-radius: 0px;
+		margin-left: 0px;
+	}
+
+	.hero header nav ul li.action a:hover {
+		box-shadow: none;
+	}
+
+	.hero nav.active ul li a:before {
+		content: "";
+		width: 100%;
+		height: 8px;
+		background: #E3FF7C;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%) scaleX(0);
+		transform-origin: right;
+		transition: .5s transform;
+	}
+
+	.hero nav.active ul li a:hover:before {
+		transform: translateY(-50%) scaleX(1);
+		transform-origin: left;
+		transition: .5s transform;
+	}	
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  top: 129%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1280px;
+  width: 100%;
+  background: #10182F;
+  border-radius: 6px;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
+</style>
+</head>
+<body>
+
+	<section class="hero">
+		<header>
+			<div class="container">
+				<div class="logo">
+					<h2>Landing page<span></span></h2>
+				</div>
+
+				<nav class="menu-overlay">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">About</a></li>
+						<li class="action"><a href="#">Learn More</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="details">
+			<div class="container">
+				<h1>Build Responsive Landing Page <br>Business Website Easily</h1>
+				<p>"Transform Your Business with Cutting-Edge Solutions. Experience Innovation, Drive Growth, and Achieve Success with Our Expert Services. Start Your Journey Towards a Brighter Future Today!"</p>
+
+				<a href="#">Create Now</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="footer">
+		<div class="footer-row">
+		  <div class="footer-col">
+			<h4>Info</h4>
+			<ul class="links">
+			  <li><a href="#">About Us</a></li>
+			  <li><a href="#">Compressions</a></li>
+			  <li><a href="#">Customers care</a></li>
+			  <li><a href="#">Service</a></li>
+			  <li><a href="#">Collection</a></li>
+			</ul>
+		  </div>
+		  <div class="footer-col">
+			<h4>Explore</h4>
+			<ul class="links">
+			  <li><a href="#">New  Designs</a></li>
+			  <li><a href="#">Latest Designs</a></li>
+			  <li><a href="#">Themes</a></li>
+			  <li><a href="#">Popular Designs</a></li>
+			  <li><a href="#">Art Skills</a></li>
+			  <li><a href="#">New Uploads</a></li>
+			</ul>
+		  </div>
+		  <div class="footer-col">
+			<h4>Store Information</h4>
+			<ul class="links">
+			  <li><a href="#">Fazalabad Stop, Okara - Pakistan</a></li>
+			  <li><a href="#">+92-311-1777-212</a></li>
+			  <li><a href="#">muhammadzain6787@gmail.com</a></li>
+			  <li><a href="#">Security</a></li>
+			  <li><a href="#">Gray Nickels</a></li>
+			  <li><a href="#">ZA Groups</a></li>
+			</ul>
+		  </div>
+		  <div class="footer-col">
+			<h4>Landing Page</h4>
+			<p>
+			  Subscribe to our Chanal for a weekly dose
+			  of news, updates, helpful tips, and
+			  exclusive offers.
+			</p>
+			<form action="#">
+			  <input type="text" placeholder="Your email" required>
+			  <button type="submit">SUBSCRIBE</button>
+			</form>
+			<div class="icons">
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.linkedin.com/in/muhammad-zain-2278a425a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+					<a href="#"><i class="fab fa-youtube"></i></a>
+					<a href="https://github.com/zain12333">
+                        <i class="fa-brands fa-github"></i></a>
+					</div>
+		  </div>
+		</div>
+	  </section>
+	 
+
+	<!-- javascript code file added -->
+	<script type="text/javascript" src="./index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    border: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.header-part{
+    height: 400px;
+    width: 100%;
+    background-color: #2b333f;
+    color: rgb(6, 42, 143);
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(244, 244, 247, 0.986);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000; 
+}
+
+
+.navbar:hover{
+  background-color:  rgb(9, 29, 207);
+}
+
+.nav-item{
+    height: 40px;
+    width: 100%;
+    font-size: 1.50rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-item a{
+    height: auto;
+    width: 600px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-lists{
+  color: #000;  
+    cursor: pointer;
+}
+
+.nav-lists:hover, .nav-item a:hover{
+    color: white;
+}
+
+
+.about-section{
+  width: 100%;
+  background-color: #070707;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.about-me{
+    color: #181717;
+    margin-left: 15px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 300px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    background-image: linear-gradient(45deg , #e0d3d3 , #d1d3dd );
+    box-shadow: 0px 0px 10px 0px 
+    #000;
+}
+
+.about-me:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px 
+    #fff;
+    color: #fff;
+    margin-top: 30px;
+    background-image: linear-gradient(360deg, #696a70, #410f0f);
+    transition: 1s ease-in-out;
+}
+
+.img-box img{
+    height: 300px;
+    width: 300px;
+    border-radius: 70%;
+    margin-left: 150px;
+}
+
+
+
+/*MAIN BOX */
+/*    SKILL-SECTION    */
+.skill-section{
+  height: 250px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.skills{
+height: auto;
+width: 100%;
+font-size: 25px;
+overflow-x: auto;
+white-space: nowrap;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+}
+
+.logo-box{
+  height: 220px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo-box img{
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 3/2;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.logo-box img:hover{
+  box-shadow: 5px 1px 10px 1px 
+  rgb(0, 191, 255);
+  transition: 0.5s;
+}
+
+
+
+/*    EDUCATION-SECTION START    */ 
+.heading{
+  width: 100%;
+  height: 30px;
+  color: #fff;
+  font-size: 26px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #092635;
+}
+
+.education-section{
+    width: auto;
+    background-color: #c3c9cc;
+    height: 400px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.college{
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 300px;
+    width: 50%;
+    color: #242020;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(45deg , #53af5f , #4165a8 );
+}
+
+.college:hover{
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px 
+    #fff;
+    margin: 30px;
+    background-image: linear-gradient(190deg ,#4e9731, #40819b );
+    transition: 1s;
+    
+}
+
+.clg-img img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin-right: 150px;
+}
+
+.degree-section{
+    width: 100%;
+    background-color: #b3b2bb;
+    height: 400px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.degree{
+  margin-left: 70px;
+  margin-right: 70px;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 300px;
+  width: 50%;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: linear-gradient(45deg , #5bbb47 , #366dac );
+  
+}
+
+.degree:hover{
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px 
+    #fff;
+    margin: 30px;
+    transition: 1s;
+    background-image: linear-gradient(190deg ,#c5c74b, #c968cc );
+}
+
+.uni-img img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}        
+
+
+
+
+/*                 Project-section starts             */
+.project-page{
+  height: auto;
+  width: 100%;
+  background-color: #a5c8da;
+}
+
+
+.project-title{
+  width: 100%;
+  height: 30px;
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #092635;
+}
+
+.project-section{
+  width: auto;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+
+
+.project-1{
+  color: #000;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  background-image: linear-gradient(45deg , #50b188 , #4264a5 );
+}
+
+.project-1 a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.project-1 a:hover{
+  color: #000;
+}
+
+.project-1:hover{
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px 
+    #fff;
+    margin-top: 30px;
+    transition: 1s;
+}
+
+.project-2{
+
+    color: #000;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 300px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    background-image: linear-gradient(45deg , #4478a8 , #19376D );
+  }
+
+.project-2:hover{
+  color: #FFF;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px 
+    #fff;
+    margin-top: 30px;
+    transition: 1s;
+}
+
+.project-2 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.project-2 a:hover{
+  color: #000;
+}
+
+.internship-title{
+  width: 100%;
+  height: 30px;
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #050505;
+  color: #FFF;
+}
+
+
+.internship-project{
+  width: 100%;
+  background-color: #e1e0e7;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.intern-project{
+   color: #000;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 380px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    background-image: linear-gradient(45deg , #e6e343, #dbcc45 );
+}
+
+.intern-project a{
+  color: #FFF;
+  text-decoration: none;
+}
+
+.intern-project:hover{
+    color: #FFF;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px 
+    #fff;
+    margin-top: 30px;
+    transition: 1s;
+}
+
+
+
+/*         Experience section     */
+
+.expeience-sec{
+  height: auto;
+  width: 100%;
+  
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #e9e0e0;
+}
+
+.intern-exp{
+  color: #0f0f0f;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  background-image: linear-gradient(45deg , #e69262 , #d650b5 );
+  gap: 10px;
+}
+
+
+.exp-title{
+  width: 100%;
+  height: 30px;
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #092635;
+  color: #FFF;
+}
+
+.exp-box{
+  
+  width: 100%;
+  background-color: #dae2e6;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+
+
+
+/*       FOOTER-SECTION          */
+
+.footer-section{
+  height: 400px;
+  width: auto;
+  background: #000;
+}
+
+.footer-ele{
+  height: 300px;
+  width: 100%;
+  background-color: #464444;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.services{
+ height: 300px;
+ color: #fff;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.social-media{
+  height: 180px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-media a{
+  color: #FFF;
+  text-decoration: none;
+}
+
+.social-media a:hover{
+  color: rgb(0, 149, 255);
+  margin-left: 5px;
+  transition: 1s;
+}
+
+.contact{
+ height: 130px;
+ color: #FFF;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+}
+
+.contact a{
+  color: #FFF;
+  text-decoration: none;
+}
+
+.contact a:hover{
+  color: rgb(0, 170, 255);
+  padding-left: 5px;
+  transition: 1s;
+}
+
+.contact i{
+  font-size: 0.7rem;
+  text-transform: lowercase;
+}
+
+.developer{
+  height: 100px;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.developer i{
+  color: rgb(200, 13, 13);
+}
+
+
+@media screen and (max-width: 200px) {
+    .nav-item a, .internship-title , .internship-project {
+      font-size: 0.5rem;
+      padding: 5px;
+    }
+  
+    .nav-box, .intern-project {
+      height: auto;
+    }
+
+    .nav-lists{
+      font-size: 0.5rem;
+    }
+
+    .skill-section{
+      width: auto;
+      height: auto;
+      display: grid;
+    }
+ 
+    .skills{
+      font-size: 0.5rem;
+    }
+
+    .logo-box{
+      height: auto;
+      width: auto;
+      display: grid;
+      grid-template-columns: repeat(2); 
+      justify-content: center; 
+      gap: 4px;
+    }
+
+    .logo-box img{
+      height: 50px; 
+      width: 50px; 
+    }
+
+    .header-part, .about-section, .education-section, .degree-section, .project-section{
+      height: auto;
+      width: auto;
+      display: grid;
+      gap: 10px;
+    }
+
+    .about-section{
+      margin-top: 40px;
+    }
+    
+    .about-me, .college, .degree, .project-1, .project-2, .internship-project,  .intern-project, .exp-box ,.intern-exp, .footer-section{
+      width: auto;
+      height: auto;
+      display: grid;
+      grid-template-rows: repeat(1);
+      grid-auto-rows: min-content;
+      gap: 5px;
+    }
+
+    .degree{
+      width: auto;
+      height: auto;
+      display: grid;
+      grid-template-rows: repeat(1);
+      grid-auto-rows:  min-content;
+      gap: 5px;
+      margin-left: 30px;
+    }
+
+    .internship-title, .internship-project, .intern-project, .degree h3, .about-me h3, .project-title , .project-section, .footer-ele, .footer-ele h2, .footer-ele-2{
+      font-size: 0.6rem;
+    }
+  
+    .about-me span, .college span, .college h3, .degree span, .intern-exp span, .intern-exp h3, .footer-section span, .footer-ele-2 span{
+      font-size: 0.4rem;
+      gap: 10px;
+    }
+
+    body title{
+      font-size: 0.6rem;
+    }
+  
+    
+    .img-box img, .clg-img img, .uni-img img{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%; 
+      margin-bottom: 5px; 
+      margin-top: 10px;
+      margin-left: 0px;
+    }
+      #resume, .contact{
+      display: none;
+    }
+
+    .developer{
+      flex-direction: column;
+    }
+
+    .about-me{
+      margin: 10px;
+    }
+  }
+  
+
+  @media screen and (min-width: 201px) and (max-width: 400px) {
+    .nav-item a {
+      font-size: 0.6rem;
+      padding: 5px;
+    }
+
+    .nav-item{
+      justify-content: space-evenly;
+      
+    }
+
+    .nav-lists{
+      font-size: 0.6rem;
+      margin: 4px;
+
+    }
+
+    .navbox{
+      height: auto;
+      width: auto;
+      display: grid;
+      gap: 10px;
+    }
+    
+    .skill-section{
+      width: 100%;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+ 
+
+    .skills{
+      padding-bottom: 15px;
+      font-size: 0.7rem;
+    }
+
+
+    .logo-box{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); 
+      justify-content: center; 
+      gap: 10px;
+      
+    }
+
+    .logo-box img{
+      height: 40px; 
+      width: 40px;
+    }   
+    
+
+    .header-part, .about-section, .education-section, .degree-section, .project-section, .project-page{
+      height: auto;
+      width: auto;
+      display: grid;
+    }
+
+    .about-section{
+      margin-top: 40px;
+    }
+  
+    .about-me,.college, .degree, .project-1, .project-2, .internship-project,  .intern-project{
+      width: auto;
+      height: auto;
+      display: grid;
+      grid-template-rows: repeat(1 ,1fr);
+      grid-auto-rows: auto;
+      margin-bottom: 10px;
+    }
+  
+    .exp-box, .intern-exp{
+      width: auto;
+      height: auto;
+      display: grid;
+      grid-template-rows: repeat(1 ,1fr);
+      grid-auto-rows: auto;
+      gap: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .about-me span, .college , .degree span, .intern-exp span, .intern-exp h3, .internship-title, .intern-project, .internship-project, .project-title, .project-section,.intern-exp span, .footer-ele span, .developer span{
+      font-size: 0.7rem;
+      margin-top: 8px; 
+    }
+
+     
+
+    body title{
+      font-size: 0.8rem;
+    }
+  
+    
+
+   .img-box img, .clg-img img, .uni-img img{
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 8px; 
+      margin-top: 15px;
+      margin-left: 0px;
+      margin-right: 150px;
+    }
+
+    .footer-section{
+      height: 300px;
+      width: auto;
+    }
+
+    .footer-ele{
+      height: 200px;
+      background-color: #585555;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .footer-ele-2{
+      width: 100%;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .footer-ele, .footer-ele-2{
+      font-size: 0.5rem;
+    }
+    
+    .services h2, .social-media h2, .contact h2{
+      font-size: 0.6rem;
+    }
+
+       .contact{
+      display: none;
+    }
+
+    .developer{
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-me{
+      margin: 10px;
+    }
+  }
+  
+  
+  @media screen and (min-width: 401px) and (max-width: 600px) {
+
+
+
+    .nav-item a {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  
+    .nav-box {
+      height: auto;
+    }
+
+    .skill-section{
+      width: 100%;
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-bottom: 70px;
+    }
+ 
+
+    .skills{
+      padding-top: 20px;
+      font-size: 0.9rem;
+    }
+
+
+    .logo-box{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); 
+      justify-content: center; 
+      gap: 10px;
+      
+    }
+
+    .logo-box img{
+      height: 70px; 
+      width: 70px;
+    }      
+     
+    .about-section, .education-section, .degree-section, .project-section{
+      height: auto;
+      width: auto;
+      display: grid;
+    }
+  
+    .about-section{
+      margin-top: 40px;
+    }
+
+    .about-me, .college, .degree, .project-1 , .project-2, .intern-project,.project-page, .internship-project,.intern-exp, .exp-box{
+      width: auto;
+      height: auto;
+      display: grid;
+      grid-template-rows: repeat(1);
+      grid-auto-rows: max-content;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      gap: 10px;
+    }
+
+    .project-2{
+      margin-top: 10px;
+    }
+   
+
+    .intern-project{
+      margin-top: 10px;
+    }
+
+  
+  
+    .about-me span, .college span, .degree span,  .internship-title, .internship-project, .intern-project,.project-title ,.intern-exp span, .project-section, .intern-exp span {
+      font-size: 0.7rem;
+      margin-top: 1px; 
+    }
+
+    body title{
+      font-size: 0.9rem;
+    }
+  
+    .img-box img, .clg-img img, .uni-img img{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      margin-top: 20px; 
+      margin-left: 0px;
+    }
+
+    .footer-section{
+      width: auto;
+      height: auto;
+      display: grid;
+    }
+
+    .footer-ele, .footer-ele-2{
+      font-size: 0.6rem;
+    }
+    
+    .services h2, .social-media h2, .contact h2{
+      font-size: 0.8rem;
+    }
+
+    .developer{
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .about-me{
+      margin: 10px;
+    }
+
+  }
+  
+  
+  @media screen and (min-width: 601px) and (max-width: 800px) {
+    .nav-item a {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  
+    .nav-box {
+      height: auto;
+    }
+
+    .skill-section{
+      width: 100%;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 140px;
+  
+    }
+ 
+
+    .skills{
+      padding-top: 100px;
+      font-size: 0.9rem;
+    }
+    .logo-box{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); 
+      justify-content: center; 
+      gap: 10px;
+      
+    }
+
+    .logo-box img{
+      height: 80px; 
+      width: 80px;
+    }      
+  
+    .heading,.about-section, .education-section, .degree-section, .footer-section{
+      height: auto;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-section{
+      margin-top: 40px;
+    }
+  
+    .about-me, .college, .degree{
+      padding: 20px;
+      width: 70%;
+      text-align: center;
+      
+    }
+  
+    .about-me span, .college span, .degree span{
+      font-size: 0.9rem;
+      display: block;
+      margin-top: 12px; 
+    }
+
+    body title{
+      font-size: 1rem;
+    }
+  
+    .img-box img, .clg-img img, .uni-img img{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 12px; 
+      margin-top: 20px;
+      margin-left: 0px;
+      margin-right: 150px;
+    }
+
+    .internship-title, .internship-project, .project-title , .project-section, .footer-ele span, .footer-ele-2 span{
+      font-size: 0.9rem;
+    }  
+ 
+    .project-1 , .project-2,.intern-exp{
+      width: auto;
+      height: auto;
+      display: grid;
+      grid-template-rows: repeat(1);
+      grid-auto-rows: max-content;
+      margin-bottom: 15px;
+      gap: 15px;
+    }
+    
+    .internship-project{
+      width: full;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-auto-columns: max-content;
+      margin-bottom: 15px;
+    }
+    
+    .intern-project{
+      height: auto;
+      width: auto;
+      gap: 15px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .project-page, .exp-box, .exp-title, .services h2, .social-media h2, .contact h2{
+      height: auto;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .developer{
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+  
+  
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    .nav-item a {
+      font-size: 1.2rem;
+      padding: 15px;
+    }
+  
+    .nav-box {
+      height: auto;
+    }
+  
+    .skill-section{
+      margin-top: 280px;
+      height: 250px;
+    }
+
+    .heading,.about-section, .education-section, .degree-section, .footer-section{
+      height: auto;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-section{
+      margin-top: 40px;
+    }
+  
+    .about-me, .college, .degree{
+      padding: 20px;
+      width: 70%;
+      text-align: center;
+    }
+  
+    .about-me span, .college span {
+      font-size: 1rem;
+      display: block;
+      margin-top: 12px; 
+    }
+  
+    .degree span {
+      font-size: 0.8rem; 
+      line-height: 1.2; 
+      display: block;
+      margin-top: 12px; 
+    }
+  
+    .img-box img, .clg-img img, .uni-img img{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 12px; 
+      margin-top: 20px;
+      margin-left: 0px;
+      margin-right: 100px;
+    }
+
+    
+    .internship-title, .internship-project, .project-title , .project-section{
+      font-size: 0.9rem;
+    }  
+ 
+    .project-1 , .project-2, .intern-exp{
+      width: auto;
+      height: auto;
+      display: grid;
+      grid-template-rows: repeat(1);
+      grid-auto-rows: max-content;
+      margin-bottom: 15px;
+      gap: 15px;
+    }
+    
+    .internship-project{
+      width: full;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-auto-columns: max-content;
+      margin-bottom: 15px;
+    }
+    
+    .intern-project{
+      height: auto;
+      width: auto;
+      gap: 15px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .project-page, .exp-box, .exp-title{
+      height: auto;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .developer{
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  
+  
+  
+  
+  @media screen and (min-width: 1001px) and (max-width: 1200px) {
+    .nav-item a {
+      font-size: 1.4rem;
+      padding: 18px;
+    }
+
+   
+    
+    .internship-title, .internship-project, .project-title , .project-section{
+      font-size: 1rem;
+    }  
+ 
+    .project-1 , .project-2, .intern-exp{
+      width: auto;
+      height: auto;
+      display: grid;
+      grid-template-rows: repeat(1);
+      grid-auto-rows: max-content;
+      margin-bottom: 15px;
+      gap: 15px;
+    }
+    
+    .internship-project{
+      width: full;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-auto-columns: max-content;
+      margin-bottom: 15px;
+    }
+    
+    .intern-project{
+      height: auto;
+      width: auto;
+      gap: 15px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .project-page, .exp-box, .exp-title, .heading{
+      height: auto;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+     
+ .footer-section, .education-section, .degree-section{
+      height: auto;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .developer{
+      flex-direction: column;
+      justify-content: center;
+    }
+  } 
+
+    </style>
+</head>
+<body>
+    <header>
+        <section class="nav-box">
+            <div class="navbar">
+                <nav class="nav-item">
+                    <li id="home" class="nav-lists">Home</li>
+                    <li id="project" class="nav-lists">Project</li>
+
+                    <li id="connect" class="nav-lists">Contact</li>
+                    <li id="skill" class="nav-lists">skill</li>
+                    <a href="CV.pdf" download="CV.pdf" id="CV">Download cv</a>
+                </nav>
+            </div>
+            </section>
+
+            
+        <div class="header-part">
+        <section class="about-section">
+            <div class="about-me"> 
+                <h3>About me</h3>
+                <h3>WEB Developer</h3>
+                <span>
+                    Assalamu Alaikum I am   Muhammad Zain.
+I am Passionate about learning new skills in the IT industry, I am currently pursuing a Bachelor of Engineering (BS) in Computer Science. Skilled in WEB development, I have a strong ability to create engaging user interfaces. However, my ambition extends to mastering Data Structures and Algorithms (DSA) and eventually becoming proficient in full-stack development. With a proactive approach to learning and a determination to excel, I am committed to evolving into a versatile IT professional and also experience in App development
+                    </span>
+            </div>
+            <div class="img-box">
+             <img src="zain.jpeg" alt="">
+            </div>
+        </section>
+        </div>
+        </header>
+        <main>
+        <section class="skill-page">
+            <div class="skills">
+                <!-- <h3>Skills   Technologies and Tools</h3> -->
+                <title class="heading">Skill</title>
+            </div>
+            <div class="logo-box">
+                <img src="vs-code.png">
+                <img src="Kotline.png">
+                <img src="html-logo.png">
+                <img src="CSS-Logo.jpg">
+               <img src="AS.jpg">
+                <img src="js-logo.png">
+                 <img src="github-logo.png">
+                
+                
+            </div>
+        </section>
+
+        <section id="edu-sec"> 
+            <title class="heading">ABOUT EDUCATION</title>
+        <div class="education-section">
+            <div class="college">
+                <h3>PUNJAB GROUP OF COLLAGE</h3>
+                <span>In 2021,  I have passed of intermediante  in  CS with 82% and Obtained marks is 897, I recommended my CS in Punjab College  at Okara,Pakistan. I completed my CS in 2021 with a marks of 897/1000. Throughout my ICS, I gained proficiency in programming languages like C and Java, mastered OOP concepts, OS, and networking.
+                </span> </div>
+                <div class="clg-img">
+                    <img src="punjab.jpg" alt="">
+                </div>
+        </div>  </section>
+
+        <section class="degree-section">
+            <div class="uni-img">
+                <img src="2.jpg" alt="">
+            </div>
+            <div class="degree">
+                <h3>COMSATS univerity Sahiwal</h3> 
+                <span>After completing my ICS in Information Technology in 2021, I enrolled in the Bachelor of COMPUTER SCIENCE (CS) program in Information & Technology at COMSATS univerity. Currently pursuing this degree, I am set to complete it in July 2026.
+
+                    Throughout my BSCS DEGREE, I have Developed into advanced programming languages, mastered Data Structures and Algorithms (DSA), explored the intricacies of WEB development, ventured into Android development, and engaged with concepts of Artificial Intelligence (AI) and Machine Learning (ML). This comprehensive curriculum has equipped me with a diverse skill set and positioned me to thrive in the ever-evolving landscape of Information Technology.</span>
+            </div>
+            <div class="uni-img">
+                <img src="comsats univerity.jpg" alt="">
+            </div>
+        </section>
+
+
+      <section class="project-page">
+       <title class="project-title">ABOUT PROJECTS</title> 
+        <div class="project-section">
+            <div class="project-1">
+                <h3>Tic Tac Toe</h3>
+                <span>The "Tic Tac Toe" project is a basic web application created using HTML5, CSS3, and JavaScript (ES6). It serves as a learning exercise for frontend development, focusing on DOM manipulation. The game allows users to play the classic Tic Tac Toe game directly in their web browser. It employs HTML for structuring the game interface, CSS for styling, and JavaScript for implementing game logic and interactivity. Through this project, developers gain foundational knowledge in web development concepts and techniques, paving the way for further exploration and skill development in frontend development.</span>
+                <a href="file:///C:/Users/User/Desktop/Web%20Develpement/internship/Task3/Task3.html" target="main">Play</a>
+            </div>
+            <div class="project-2">
+                <h3>Weather Checkout</h3>
+                <span>The Weather Checkout web page is a project aimed at showcasing your professional journey, skills, projects, education, and future goals. It's built using HTML5, CSS3, and JavaScript (ES6) with a focus on DOM manipulation techniques for dynamic content updates. Through sections like  weather check,Location,Humidity,wind, it provides visitors with insights into your background, expertise, and aspirations. This project serves as a central platform for presenting your  Check out your area of Weather also.</span>
+                <a href="file:///C:/Users/User/Desktop/Web%20Develpement/internship/Task5/Task4.html" target="main">VIEW</a>
+            </div>
+        </div>
+        
+
+        <title class="internship-title">INTERNSHIP PROJECTS/TASKS</title>
+        <div class="internship-project">
+            
+            <div class="intern-project">
+                <h3>Landin Page</h3>
+                <span>Create a landing page featuring a sticky navigation bar and dynamic background color changes upon scrolling. This project aims to enhance user experience by ensuring easy navigation and visual appeal.</span>
+                <a href="file:///C:/Users/User/Desktop/Web%20Develpement/internship/Task1/bbbs.html" target = "main">LIVE</a>
+            </div>
+            <div class="intern-project">
+                <h3>Stopwatch</h3>
+                <span>Develop a digital stopwatch web application with functionalities including start, stop, restart, and record lap. This project aims to provide users with a convenient tool for timekeeping and lap recording.</span>
+                <a href="file:///C:/Users/User/Desktop/Web%20Develpement/internship/Task2/Task2.html" target=" main">LIVE</a>
+            </div>
+            <div class="intern-project">
+                <h3>Tic Tac Toe</h3>
+                <span>Develop a Tic-Tac-Toe game web application that allows users to play against each other or against an AI opponent. This project aims to provide users with an engaging and interactive gaming experience.</span>
+                <a href="file:///C:/Users/User/Desktop/Web%20Develpement/internship/Task3/Task3.html" target="main">LIVE</a>
+            </div>
+            <div class="intern-project">
+                <h3>Portfolio</h3>
+                <span>Create a personal portfolio website to showcase your skills, experience, projects, education, and future goals. This project aims to establish your online presence and serve as a professional platform for potential employers or clients to learn more about you.</span>
+                <a href="file:///C:/Users/User/Desktop/Web%20Develpement/internship/Task4/index.html" target="main">LIVE</a>
+            </div>
+            <div class="intern-project">
+                <h3>Weather CheckOut</h3>
+                <span>Develop a weather application that allows users to check current weather conditions and forecasts for locations worldwide. This project aims to provide users with valuable weather information in a user-friendly and intuitive interface. 
+                </span>
+                <a href="file:///C:/Users/User/Desktop/Web%20Develpement/internship/Task5/index.html" target="main">LIVE</a>
+            </div>
+           </section>
+
+        <section class="experience-sec">
+            <title class="exp-title">Experience</title>
+            <div class="exp-box">
+            <div class="intern-exp">
+                <h3>Code Alpha</h3>
+                <span>APP Development Intern
+                    CODE Alpha, July 2024 - October 2024
+                    
+                    As a App Development intern at Code Alpha, I gained hands-on experience by working on Two projects of High level complexity. I honed my skills in , mastering the art of building responsive and visually appealing web interfaces. Collaborating closely with senior developers, I learned best practices in code structuring, optimization, and cross-browser compatibility. The internship provided valuable lessons in communication, problem-solving, and adaptability within a dynamic team environment. Overall, it was a transformative experience that equipped me with the confidence and expertise to excel in frontend development.</span>
+            </div>
+            <div class="intern-exp">
+                <h3>Prodigy InfoTech</h3>
+                <span>Web Development Intern
+                    Prodigy InfoTech summer Internship Program, 2024.
+                    
+                    During my internship at Codsoft, I engaged in a month-long immersive program focused on web development. Tasks included mastering HTML, CSS, JavaScript, Node.js, and MongoDB. Under mentorship, I worked on real-world projects, fostering collaboration and problem-solving skills. Upon completion, I received a certificate, validating my participation and achievements.</span>
+            </div> </div>
+        </section>
+</main>
+
+
+
+<footer class="footer-section">
+    <div class="footer-ele">
+        <div class="services">
+            <h2>Services</h2>
+            <span>Web-Design</span>
+            <span>Web-development</span>  
+            <span>App Development</span>
+            <span>Firebase,Kotline</span>
+            <span>Front-end design</span>
+        </div>
+        <div class="social-media">
+            <h2>Find Me At</h2>
+            <a href="https://www.linkedin.com/in/muhammad-zain-2278a425a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="main" id="linkedin"><i class="fa-brands fa-linkedin"></i>        Linkedin</a> 
+            <a href="https://github.com/zain12333" target="main" id="github"><i class="fa-brands fa-github"></i> Github</a>
+           <a href="https://www.facebook.com/profile.php?id=100058611521257&mibextid=ZbWKwL" target="main" id="fa-facebook-f"><i class="fab fa-facebook-f"></i> facebook</a>
+           <a href="https://discord.com/invite/k4jBTAmN" target="main" id="discord"><i class="fa-brands fa-discord"></i> Discord</a>
+        </div>
+        <div class="contact">
+         <h2 id="contactInfo">Contact info</h2>
+         <span><i class="fa-solid fa-phone"></i> +923030997304</span>
+         <span><i class="fa-solid fa-envelope"></i>  muhammadzain6787@gmail.com</span>
+        </div>
+    </div>
+    <div class="footer-ele2">
+        <div class="developer">
+            <span>Copyright ©2024 </span>
+            </div>
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>    
+</body>
+</html>

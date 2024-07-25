@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Checkout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    width: auto;
+    height: auto;
+    font-size: 1.90rem;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(17, 17, 17);
+}
+
+header:hover{
+    color: #d3bfbf;
+    background-color: #084ca5;
+}
+
+
+
+main{
+    margin-top: 0px;
+    margin-bottom: 80px;
+    flex: 1;
+}
+
+.app{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-1{
+    height: auto;
+    width: 250px;
+    border-radius: 5px;
+    background-image: url('/bg-img.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 60px;
+    align-items: center;
+    
+    
+}
+
+ .card-1 h2{
+    color: #050202;
+} 
+
+#search-box{
+    width: 200px;
+    height: 30px;
+    border: 3px solid rgb(240, 12, 183);
+    border-radius: 4px;
+    padding-left: 10px;
+    background-color: white;
+    color: #000;
+} 
+
+.card-1 button{
+    width: 80px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #0a0a0a;
+    cursor: pointer;
+    margin-bottom: 20px;
+    
+}
+
+
+
+
+.card-2{
+    height: 300px;
+    width: 400px;
+    border-radius: 5px;
+    background-image: url(/bg-img2.png);
+    background-size: contain;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    gap: 30px;
+    align-items: center;
+    background-color: rgba(215, 230, 15, 0.74);
+    
+}
+
+.card-2-data, .card-2-data-2{
+    height: 200px;
+    width: 150px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.temperature, .humidity, .wind, .rain, .snow, .clouds{
+    width: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-spinner {
+    border: 4px solid rgba(30, 19, 19, 0.916);
+    border-left-color: #ff3ef2; 
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-right: 5px;
+  }
+
+  body{
+    background-image: linear-gradient(80deg, #cac7c2, #5a535c);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  /* footer there to start */
+
+  .footer-section{
+    height: 200px;
+    margin-top: 20px;
+    width: 100%;
+    background-image: linear-gradient(50deg , #401F71 , #000);
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+  }
+
+  .social-media, .about-project{
+    height: 150px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+
+  .author{
+    width: auto;
+    height: 50px;
+    background-image: linear-gradient(240deg , #401f71 , #000);
+    padding-left: 10px;
+  }
+
+  .author a{
+    text-decoration: none;
+    color: #FFAF45;
+  }
+
+  .author a:hover{
+    pad: 1px;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+  }
+
+  .social-media a, .about-project a, .author{
+    text-decoration: none;
+    color: white;
+  }
+
+  .social-media a:hover{
+    color: #FFAF45;
+    margin: 2px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .about-project a:hover{
+    color: #ff3ef2;
+    padding: 2px;
+    transition: 0.5s ease-in-out;
+  }
+
+
+
+
+/*           Responsive Design        */
+
+
+
+
+/* @media screen and (max-width: 200px) {
+    header {
+        font-size: 0.90rem;
+    }
+
+    .app {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card-1{
+        width: auto;
+        height: auto;
+        padding: 10px;
+        gap: 20px;
+        text-align: center;
+        font-size: 0.90rem;
+    }
+
+    .card-2{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.90rem;
+        background-image: none;
+        background-color: transparent;
+    }
+
+
+    #search-box {
+        width: 80px;
+        height: 20px;
+        font-size: 0.60rem;
+    }
+
+    .card-1 button {
+        width: 50px;
+        height: 20px;
+        font-size: 0.40rem;
+    }
+
+    .card-2-data, .card-2-data-2 {
+        width: 130px;
+    }
+
+    .card-2-data h4, .card-2-data-2 h4{
+        font-size: 0.60rem;
+    }
+
+    .card-2 i{
+        margin-top: 2px;
+    }
+
+    .footer-section{
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 30px;
+        font-size: 0.60rem;
+    }
+
+} */
+
+
+@media screen and (min-width: 201px) and (max-width: 400px) {
+    header {
+        font-size: 1.2rem;
+    }
+
+    .app {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card-1, .card-2 {
+        width: auto;
+        height: auto;
+        padding: 15px;
+        gap: 30px;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    #search-box {
+        width: 100px;
+        height: 25px;
+        font-size: 0.80rem;
+    }
+
+    .card-1 button {
+        width: 60px;
+        height: 25px;
+        font-size: 0.60rem;
+    }
+
+    .card-2-data {
+        width: 150px;
+    }
+
+    .card-2-data h4{
+        font-size: 0.70rem;
+    }
+    
+    .card-1{
+        width: auto;
+        height: auto;
+        padding: 10px;
+        gap: 20px;
+        text-align: center;
+        font-size: 0.90rem;
+    }
+
+    .card-2{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.90rem;
+        background-image: url(/bg-img2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: transparent;
+    }
+
+    .card-2 i{
+        margin-top: 2px;
+    }
+    
+
+    .footer-section{
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 30px;
+        font-size: 0.70rem;
+    }
+
+    .footer-section h2{
+        font-size: 1rem;
+    }
+    
+}
+
+
+@media screen and (min-width: 401px) and (max-width: 800px) {
+    header {
+        font-size: 1.2rem;
+    }
+
+    .app {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .card-1, .card-2 {
+        width: auto;
+        height: auto;
+        padding: 15px;
+        gap: 30px;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    #search-box {
+        width: 150px;
+        height: 25px;
+        font-size: 0.80rem;
+    }
+
+    .card-1 button {
+        width: 60px;
+        height: 25px;
+        font-size: 0.60rem;
+    }
+
+    .card-2-data {
+        width: 150px;
+    }
+
+    .card-2-data h4{
+        font-size: 0.70rem;
+    }
+    
+    .card-1{
+        width: auto;
+        height: auto;
+        padding: 10px;
+        gap: 20px;
+        text-align: center;
+        font-size: 0.90rem;
+    }
+
+    .card-2{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.90rem;
+        background-image: url(/bg-img2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: transparent;
+    }
+
+    .card-2 i{
+        margin-top: 2px;
+    }
+
+    
+    .footer-section{
+        width: 100%;
+        height: 200px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+        font-size: 0.90rem;
+    }
+
+    .social-media , .about-project{
+       width: auto;
+       height: 150px;
+    }
+
+    .author{
+        padding-top: 20px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-section h2{
+        font-size: 1.20rem;
+    }
+
+}
+
+@media  screen and (min-width:800px) {
+     
+    .footer-section{
+        width: 100%;
+        height: 200px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+        font-size: 0.90rem;
+        background-image: linear-gradient(240deg , #401f71 , #000);
+    }
+
+    .social-media , .about-project{
+       width: auto;
+       height: 150px;
+    }
+
+    .author{
+        padding-top: 20px;
+        height: 150px;
+        background-image: linear-gradient(240deg , #401f71 , #000);
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-section h2{
+        font-size: 1.20rem;
+    }
+}
+
+</style>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1280px;
+  width: 100%;
+  background: #10182F;
+  border-radius: 6px;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
+</style>
+<body>
+  <header>Findout about Weather</header>
+  
+  
+  <main>
+    <div class="app">
+    <div class="card-1">
+      <h2>Weather-Checkout</h2>
+      
+      <input type="search" name="" placeholder="Enter Location" id="search-box">
+      <div id="loading-spinner" class="loading-spinner" style="display: none;"></div>
+      
+      <button id="btn">CHECK</button>
+    </div>
+
+
+    <div class="card-2">
+      <div class="card-2-data">
+        <h4>Temperature</h4>
+        <div class="temperature">
+         
+          <span id="temperature">0c</span> <i class="fa-solid fa-temperature-half"></i>
+        </div>
+
+        <h4>Wind-speed</h4>
+        <div class="wind">
+          <span id="wind">0 km/h</span><i class="fa-solid fa-wind"></i>
+        </div>
+
+        <h4>Humidity</h4>
+        <div class="humidity">
+          <span id="humidity">0 %</span><i class="fa-solid fa-water"></i>
+        </div>
+      </div>
+      <div class="card-2-data-2">
+        <h4>RainIntensity</h4>
+        <div class="rain">
+          <span id="rain">0 mm</span> <i class="fa-solid fa-cloud-rain"></i>
+        </div>
+        <h4>SnowIntensity</h4>
+        <div class="snow">
+          <span id="snow">0 inch</span> <i class="fa-solid fa-snowflake"></i>
+        </div>
+        <h4>Clouds</h4>
+        <div class="clouds">
+          <span id="cloud">0 %</span> <i class="fa-solid fa-cloud"></i>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </main>
+
+  <section class="footer">
+		<div class="footer-row">
+		  <div class="footer-col">
+			<h4>Info</h4>
+			<ul class="links">
+			  <li><a href="#">About Us</a></li>
+			  <li><a href="#">Compressions</a></li>
+			  <li><a href="#">Customers care</a></li>
+			  <li><a href="#">Service</a></li>
+			  <li><a href="#">Collection</a></li>
+			</ul>
+		  </div>
+		  <div class="footer-col">
+			<h4>Explore</h4>
+			<ul class="links">
+			  <li><a href="#">New  Designs</a></li>
+			  <li><a href="#">Latest Designs</a></li>
+			  <li><a href="#">Themes</a></li>
+			  <li><a href="#">Popular Designs</a></li>
+			  <li><a href="#">Art Skills</a></li>
+			  <li><a href="#">New Uploads</a></li>
+			</ul>
+		  </div>
+		  <div class="footer-col">
+			<h4>Store Information</h4>
+			<ul class="links">
+			  <li><a href="#">Fazalabad Stop, Okara - Pakistan</a></li>
+			  <li><a href="#">+92-311-1777-212</a></li>
+			  <li><a href="#">muhammadzain6787@gmail.com</a></li>
+			  <li><a href="#">Security</a></li>
+			  <li><a href="#">Gray Nickels</a></li>
+			  <li><a href="#">ZA Groups</a></li>
+			</ul>
+		  </div>
+		  <div class="footer-col">
+			<h4>Weather CHECKER</h4>
+			<p>
+			  Subscribe to our Chanal for a weekly dose
+			  of news, updates, helpful tips, and
+			  exclusive offers.
+			</p>
+			<form action="#">
+			  <input type="text" placeholder="Your email" required>
+			  <button type="submit">SUBSCRIBE</button>
+			</form>
+			<div class="icons">
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.linkedin.com/in/muhammad-zain-2278a425a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+					<a href="#"><i class="fab fa-youtube"></i></a>
+					<a href="https://github.com/zain12333">
+                        <i class="fa-brands fa-github"></i></a>
+					</div>
+		  </div>
+		</div>
+	  </section>
+<script src="scrpt.js"></script>
+</body>
+</html>

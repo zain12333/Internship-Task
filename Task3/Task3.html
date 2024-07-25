@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="assets/tic-tac-toe-hand-drawn-game.png" type="image/x-icon" />
+    <script src="assets/script.js" defer></script>
+    <style>
+        
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  color: #42c919;
+}
+body {
+  font-family: "Permanent Marker", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #e9e1e1;
+}
+
+.board {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.cell {
+  font-size: 4rem;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+  text-align: center;
+  text-transform: lowercase;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell:nth-child(3n) {
+  border-right: none;
+}
+
+.cell:nth-child(n + 7) {
+  border-bottom: none;
+}
+
+.statusText {
+  font-size: 30px;
+  color: rgb(79, 6, 138);
+}
+
+.restartBtn {
+  background-color: #1fbb1a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.restartBtn:hover {
+  background-color: #8a7924;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  top: 129%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1280px;
+  width: 100%;
+  background: #10182F;
+  border-radius: 6px;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="gameContainer"></div>
+    <h1>Tic Tac Toe</h1>
+    <div class="board">
+        <div class="cell cell-content"></div>
+        <div class="cell cell-content"></div>
+        <div class="cell cell-content"></div>
+        <div class="cell cell-content"></div>
+        <div class="cell cell-content"></div>
+        <div class="cell cell-content"></div>
+        <div class="cell cell-content"></div>
+        <div class="cell cell-content"></div>
+        <div class="cell cell-content"></div>
+    </div>
+    <h2 class="statusText"></h2>
+    <button class="restartBtn">Restart</button>
+    <section class="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+        <h4>Info</h4>
+        <ul class="links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Compressions</a></li>
+          <li><a href="#">Customers care</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Collection</a></li>
+        </ul>
+        </div>
+        <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="links">
+          <li><a href="#">New  Designs</a></li>
+          <li><a href="#">Latest Designs</a></li>
+          <li><a href="#">Themes</a></li>
+          <li><a href="#">Popular Designs</a></li>
+          <li><a href="#">Art Skills</a></li>
+          <li><a href="#">New Uploads</a></li>
+        </ul>
+        </div>
+        <div class="footer-col">
+        <h4>Store Information</h4>
+        <ul class="links">
+          <li><a href="#">Fazalabad Stop, Okara - Pakistan</a></li>
+          <li><a href="#">+92-3030997304</a></li>
+          <li><a href="#">muhammadzain6787@gmail.com</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Gray Nickels</a></li>
+          <li><a href="#">ZA Groups</a></li>
+        </ul>
+        </div>
+        <div class="footer-col">
+        <h4>Tic Tac Toe</h4>
+        <p>
+          Subscribe to our Chanal for a weekly dose
+          of news, updates, helpful tips, and
+          exclusive offers.
+        </p>
+        <form action="#">
+          <input type="text" placeholder="Your email" required>
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+        <div class="icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/muhammad-zain-2278a425a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/zain12333">
+                          <i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+      </div>
+      </section>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+        *,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.lap-list {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: end;
+  align-items: end;
+}
+.lap-label {
+  display: flex;
+  margin-right: 150px;
+  margin-bottom: 10px;
+}
+body {
+  background-color: #2fcf6d;
+  background-image: url(../asserts/img1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300vh;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  color: white !important;
+
+  text-decoration: none;
+  padding: 20px;
+}
+a {
+  color: white !important;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 40px;
+
+  text-align: justify;
+  justify-content: space-between;
+  gap: 300px;
+}
+a:hover {
+  box-shadow: rgba(255, 255, 255, 0.25);
+}
+ .a1 {
+  color: white !important;
+  text-decoration: none;
+  padding: 30px;
+  font-size: 40px;
+  margin-top: 16px;
+  text-align: justify;
+  justify-content: space-between;
+  gap: 300px;
+}
+.a1:hover {
+  box-shadow: rgba(255, 255, 255, 0.25);
+}
+
+.container {
+  background-color: #fff;
+  width: 58%;
+  min-width: 500px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+  padding: 20px 0;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.338);
+}
+
+.timer-display {
+  position: relative;
+  width: 92%;
+  background: #fff;
+  left: 4%;
+  font-family: "Roboto mono", monospace;
+  color: #8c52ff;
+  font-size: 30px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(65, 5, 145, 0.25);
+}
+
+.buttons {
+  width: 90%;
+  margin: 60px auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+  gap:1rem;
+}
+
+.buttons button {
+  width: 120px;
+  height: 45px;
+  background-color: #8c52ff;
+  color: #fff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttons button:nth-last-child(2) {
+  background-color: #e35209;
+}
+
+.buttons button:nth-last-child(1) {
+  background-color: #f7df1e;
+}
+
+.buttons button:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+
+    </style>
+  </head>
+  <body>
+    <h  class="heading">
+        <a href="#">Task 2</a>
+    </h>
+    <h1 class="heading">
+
+      <a1 href="index.html">Stopwatch</a1>
+    </h1>
+    <div class="container">
+      <div class="timer-display">
+        00 : 00 : 00 : 000
+      </div>
+      <div class="buttons">
+        <button id="start-timer">Start</button>
+        <button id="pause-timer">Pause</button>
+        <button id="reset-timer">Reset</button>
+        <button id="lap-timer" class="timer-button">Lap</button>
+      </div>
+    </div>
+    <h2 class="lap-list lap-label">Laps</h2>
+    <ul class="lap-list" id="lap-list"></ul>
+   <script src="./index.js"></script>
+  </body>
+</html>
